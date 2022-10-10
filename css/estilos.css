@@ -1,5 +1,7 @@
-/* Menu */
+/*Fuente para algunos textos*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
+/* Menu */
 * {
     margin: 0;
     padding: 0;
@@ -177,6 +179,69 @@ td {
     width: 100%;
     right: 0px;
 }
+
+/*Social media icons css*/
+.social a {
+    font-size: 4.5em;
+    padding: 3rem;
+
+}
+
+.fa-whatsapp {
+    color:#075E54;
+
+}
+
+.fa-twitter {
+    color: #00ACED;
+    
+}
+
+.fa-github {
+    color: #FFFFFF;
+}
+
+.fa-whatsapp:hover,
+.fa-twitter:hover,
+.fa-github:hover {
+    color: #D5D5D5;
+}
+
+#footer{
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 50px;
+}
+#footer, h2{
+      text-align: end;
+}
+/*Uso de layout responsivo*/
+
+/*Uso de layout responsivo*/
+@media (max-width: 992px) {
+    .social a {
+        font-size: 4em;
+        padding: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .social a {
+        font-size: 2.5em;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .social a {
+        font-size: 2em;
+        padding: .7rem;
+    }
+}
+
 
 /* Ejercicio 1 */
 
