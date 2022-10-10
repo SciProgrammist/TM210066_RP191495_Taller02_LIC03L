@@ -12,6 +12,14 @@ body {
     font-family: 'Century Gothic';
 }
 
+.aviso{
+    font-size: 40px;
+    font-weight: bold;
+    color: green;
+    text-align: center;
+    background-color: black;
+}
+
 a {
     text-decoration: none;
 }

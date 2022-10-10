@@ -3,8 +3,8 @@ function criterio() {
     let message = "Taller Practico 02 - LIC";
     window.alert(message);
 }
-//Ejercicio 1
+//Problema 01
 
-//Ejercicio 2
+//Problema 02
 
-//Ejercicio 3
+//Problema 03
