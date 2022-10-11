@@ -1,116 +1,203 @@
-/*Fuente para algunos textos*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 /*Estados generales del ejercicio 03*/
-div.formcont {
-    margin: 0;
-    padding: 0;
+.formcont .containerfrm {
+    margin: 0px;
+    padding: 0px;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
 }
 
-div.formcont{
+div.formcont {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     overflow: hidden;
-    background: url();
-    --webkit-linear-gradient:(bottom, #0250C5, #D43F8D);
-    
+    --webkit-linear-gradient: (bottom, #0250C5, #D43F8D);
+
 }
-::selection{
+
+::selection {
     color: #fff;
     background: #D43F8D;
 }
-div.container{
+
+div.containerfrm{
     width: 330px;
     background: #fff;
     text-align: center;
     border-radius: 5px;
     padding: 50px 35px 10px 35px;
 }
-.container header{
+
+.containerfrm header {
     font-size: 25px;
     font-weight: 600;
     margin: 0 0 30px 0;
 }
 
-.container .form-outer{
+.containerfrm .form-outer {
     width: 100%;
     overflow: hidden;
 }
-.container .form-outer form{
+
+.containerfrm .form-outer form {
     display: flex;
     width: 400%;
 }
-.form-outer form .page .titleform{
+
+.form-outer form .page .titleform {
     text-align: left;
     font-size: 25px;
     font-weight: 500;
 }
 
-
-
-/*Social media icons css*/
-.social a {
-    font-size: 4.5em;
-    padding: 3rem;
-
+.form-outer form .page .fieldform {
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
 }
 
-.fa-whatsapp {
-    color: #075E54;
-
+form .page .fieldform .label {
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
 }
 
-.fa-twitter {
-    color: #00ACED;
-
-}
-
-.fa-github {
-    color: #FFFFFF;
-}
-
-.fa-whatsapp:hover,
-.fa-twitter:hover,
-.fa-github:hover {
-    color: #D5D5D5;
-}
-
-#footer {
-    color: white;
-    position: fixed;
-    bottom: 0;
+form .page .fieldform input {
+    height: 100%;
     width: 100%;
-    padding: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
-#footer,
-h2 {
-    text-align: end;
+form .page .fieldform select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
 }
 
-/*Uso de layout responsivo*/
-@media (max-width: 992px) {
-    .social a {
-        font-size: 4em;
-        padding: 2em;
+form .page .fieldform button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: #D33F8D;
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .fieldform button:hover {
+    background: #000;
+}
+
+form .page .btns button {
+    margin-top: -20px !important;
+}
+
+form .page .btns buttons.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+/*Bara de progreso estilos*/
+
+.containerfrm .progress-bar {
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+
+}
+
+.containerfrm .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.containerfrm .progress-bar .step p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar .step .bullet:active{
+    border-color: #D43F8D;
+    background: #D43F8D;
+}
+.progress-bar .step .bullet span{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bulet:after{
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+}
+.progress-bar .step .bullet:active:after{
+    background:#D43F8D;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
     }
 }
-
-@media (max-width: 768px) {
-
-    .social a {
-        font-size: 2.5em;
-        padding: 1.2rem;
-    }
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+    display: none;
 }
-
-@media (max-width: 576px) {
-    .social a {
-        font-size: 2em;
-        padding: .7rem;
-    }
+.progress-bar .step p.active{
+    color: #D43F8D;
+    transition:  0.2s linear;
+}
+.progress-bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    font-size: 15px;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.progress-bar .step .check.active{
+    display:  block;
+    color: #fff;
 }
