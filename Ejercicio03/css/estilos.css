@@ -1,5 +1,57 @@
 /*Fuente para algunos textos*/
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+/*Estados generales del ejercicio 03*/
+div.formcont {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+div.formcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url();
+    --webkit-linear-gradient:(bottom, #0250C5, #D43F8D);
+    
+}
+::selection{
+    color: #fff;
+    background: #D43F8D;
+}
+div.container{
+    width: 330px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+}
+.container header{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.container .form-outer{
+    width: 100%;
+    overflow: hidden;
+}
+.container .form-outer form{
+    display: flex;
+    width: 400%;
+}
+.form-outer form .page .titleform{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+
 /*Social media icons css*/
 .social a {
     font-size: 4.5em;
@@ -61,137 +113,4 @@ h2 {
         font-size: 2em;
         padding: .7rem;
     }
-}
-
-/*Estados generales del ejercicio 03*/
-
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-.bodySection {
-    font-family: sans-serif;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    min-height: 60vh;
-}
-
-.text-center {
-    text-align: center;
-}
-
-/*Form elements*/
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-input {
-    display: block;
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-}
-
-/*Barra de progreso*/
-.progressbar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    counter-reset: step;
-}
-
-.progressbar::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 4px;
-    width: 100%;
-    background-color: #dcdcdc;
-    z-index: -1;
-
-}
-
-.progress-step {
-    width: 2.1875rem;
-    height: 2.1875rem;
-    background-color: #dcdcdc;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.progress-step::before {
-   
-    counter-increment: step;
-    content: counter(step);
-}
-
-.progress-step::after {
-    
-    content: attr(data-title);
-    position:absolute;
-    top: calc(100% +0.5rem);
-    font-size: 0.85rem;
-}
-
-/*Form*/
-
-.form {
-    width: clamp(320px, 30%, 430px);
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 0.35rem;
-    padding: 1.5rem;
-    background-color:floralwhite;
-}
-
-.form-step {
-    display: none;
-}
-
-.form-step-active {
-    display: block;
-}
-
-.input-group {
-    margin: 2rem 0;
-}
-
-/*Form Button*/
-.btn {
-    padding: 0.75rem;
-    display: block;
-    text-decoration: none;
-    background-color: rgb(11, 78, 179);
-    color: #f3f3f3;
-    text-align: center;
-    border-radius: 0.25rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-/*Button position*/
-.width-50 {
-    width: 50%;
-}
-
-.ml-auto {
-    margin-left: auto;
-}
-
-.btns-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-}
-
-.btn:hover {
-    box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgb(11, 78, 179);
 }

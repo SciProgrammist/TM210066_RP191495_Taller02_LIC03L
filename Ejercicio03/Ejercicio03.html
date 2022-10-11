@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/menu.css" rel="stylesheet">
-	<link href="../ejercicio03/css/estilos.css" rel="stylesheet">
+    <link href="../Ejercicio03/css/estilos.css" rel="stylesheet">
     <script src="../ejercicio03/js/ejercicio03.js"></script>
-	<link rel="icon" href="../img/verde.png">
-         <!--Bootstrap and icons links-->
+    <link rel="icon" href="../img/verde.png">
+    <!--Bootstrap and icons links-->
     <link href="Boostrap_files/css/bootstrap.min.css" rel="stylesheet">
     <script src="Boostrap_files/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<title>Ejercicio 3</title>
+    <title>Ejercicio 3</title>
 </head>
-<body background="../img/fondo.jpg" bgcolor="" onload="javascript:criterio()">
-    <!-- Codigo del menu -->
-<section class="title">
-		<h1>Lenguaje Interpretado al Cliente</h1>
-	</section>
+<!--background="../img/fondo.jpg"-->
 
-	<nav class="navegacion">
-		<ul class="menu">
+<body onload="javascript:criterio()">
+    <!-- Codigo del menu -->
+    <section class="title">
+        <h1>Lenguaje Interpretado en el Cliente</h1>
+    </section>
+
+    <nav class="navegacion">
+        <ul class="menu">
 
             <li class="first-item">
                 <a href="../Index.html">
@@ -59,81 +62,127 @@
     </nav>
     <br>
     <div class="container-fluid">
-    <h1 class="aviso">Hello! This is exercise three baby</h1>
+        <h1 class="aviso">Hello! This is exercise three</h1>
     </div>
+    <br>
+    <div class="formcont">
+        <div class="container">
+            <header>Compra de voleto de vuelos</header>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="step">
+                        <p>Submit</p>
+                        <div class="check fas fa-check"></div>
+                    </div>
+                </div>
 
-    <section class="bodySection">
-        <div class="container-fluid">
-            <form action="#" class="form">
-                <h1 class="text-center">Compra de voleto.</h1>
-                <!-- Barra de progreso para los pasos de compra de voleto de vuelo-->
-                <br>
-                <div class="progressbar">
-                    <div class="progress-step" data-title="Intro"></div>
-                    <div class="progress-step" data-title="Contact"></div>
-                    <div class="progress-step" data-title="ID"></div>
-                    <div class="progress-step" data-title="Password"></div>
-                </div>
-                <!--Formularios que dividen la informacion que se pide en cada parte del ejercicio.-->
-                <div class="form-step form-step-active">
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" name="username" id="username" />
+            </div>
+            <div class="form-outer">
+                <form action="#">
+                    <div class="page slide-page">
+                        <div class="titleform">
+                            Basic Info:
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">
+                                First Name
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">Last name</div>
+                            <input type="text">
+                        </div>
+                        <div class="fieldform">
+                            <button class="firstNext next">Next</button>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label for="position">Position</label>
-                        <input type="text" name="Position" id="position" />
+                    <div class="page">
+                        <div class="titleform">
+                            Contact Info:
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">Email address</div>
+                            <input type="text" placeholder="@abc.com">
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">Phone Number</div>
+                            <input type="Number">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Previous</button>
+                            <button class="prev-1 prev">Next</button>
+                        </div>
                     </div>
-                    <div class="">
-                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                    <div class="page">
+                        <div class="titleform">
+                            Date of Birth:
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">
+                                Date
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">
+                                Gender
+                            </div>
+                            <select>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Maricon</option>
+                            </select>
+                        </div>
+                        <div class="field btns">
+                            <button class=" prev-1 prev">Previous</button>
+                            <button class="prev-1 prev">Next</button>
+                        </div>
                     </div>
-                </div>
-                <div class="form-step ">
-                    <div class="input-group">
-                        <label for="phone">Phone</label>
-                        <input type="text" name="phone" id="phone" />
+                    <div class="page">
+                        <div class="titleform">
+                            Login Details:
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">
+                                User Name
+                            </div>
+                            <input type="text">
+                        </div>
+                        <div class="fieldform">
+                            <div class="label">
+                                Password
+                            </div>
+                            <input type="password">
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-3 prev">Previouse</button>
+                            <button class="Submit">Submit</button>
+                        </div>
                     </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" />
-                    </div>
-                    <div class="btns-group">
-                        <a href="#" class="btn btn-prev">Previous</a>
-                        <a href="#" class="btn btn-next">Next</a>
-                    </div>
-                </div>
-                <div class="form-step ">
-                    <div class="input-group">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" name="dob" id="dob" />
-                    </div>
-                    <div class="input-group">
-                        <label for="ID">National ID</label>
-                        <input type="number" name="ID" id="ID" />
-                    </div>
-                    <div class="btns-group">
-                        <a href="#" class="btn btn-prev">Previous</a>
-                        <a href="#" class="btn btn-next">Next</a>
-                    </div>
-                </div>
-                <div class="form-step ">
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" />
-                    </div>
-                    <div class="input-group">
-                        <label for="confirmpassword">Confirm Password</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword" />
-                    </div>
-                    <div class="btns-group">
-                        <a href="#" class="btn btn-prev ">Previous</a>
-                        <input type="submit" value="Submit" class="btn" />
-                    </div>
-                </div>
-            </form>
+
+                </form>
+            </div>
         </div>
-    </section>
-    <!--Redes sociales penultima parte-->
+        <!--Redes sociales penultima parte
     <div class="container-fluid padding" id="footer">
         <div class="row padding">
             <div class="col-12 text-center">
@@ -145,6 +194,6 @@
                 <a href="https://github.com/SciProgrammist" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
+    </div>-->
     </div>
-</body>
-</html>
+</body></html>
