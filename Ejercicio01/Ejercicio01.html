@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../ejercicio01/css/estilos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="icon" href="../img/rojo.png">
+    <title>Sueldo neto de un empleado</title>
+</head>
+
+<body background="../img/fondo.jpg" bgcolor="" onload="javascript:criterio()">
+    <!-- Codigo del menu -->
+    <section class="title">
+        <h1>Lenguaje Interpretado al Cliente</h1>
+    </section>
+
+    <nav class="navegacion">
+        <ul class="menu">
+
+            <li class="first-item">
+                <a href="../Index.html">
+                    <img src="../img/inicio.jpg" alt="" class="imagen">
+                    <span class="text-item">Inicio</span>
+                    <span class="down-item"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../ejercicio01/Ejercicio01.html">
+                    <img src="../img/ejercicio1.jpg" alt="" class="imagen">
+                    <span class="text-item">Ejercicio 1</span>
+                    <span class="down-item"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../ejercicio02/Ejercicio02.html">
+                    <img src="../img/ejercicio2.jpg" alt="" class="imagen">
+                    <span class="text-item">Ejercicio 2</span>
+                    <span class="down-item"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="../ejercicio03/Ejercicio03.html">
+                    <img src="../img/ejercicio3.jpg" alt="" class="imagen">
+                    <span class="text-item">Ejercicio 3</span>
+                    <span class="down-item"></span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <div class="content-fluid">
+        <h1 class="aviso"> Hello this is Exercise one</h1>
+    </div>
+        <!-- Codigo del ejercicio -->
+<div class="container py-4">
+      <div class="card shadow">
+      <div class="card-header bg-secondary fw-bold">
+         Sueldo neto
+      </div>
+         <div class="card-body">
+         <div class="row m-auto">
+            <div class="col">
+            </div>
+      </div>
+      <div class="row p-2">
+         <div class="col-10">
+            <div class="table-responsive">
+               <table class="table table table-striped" id="tabla">
+                  <thead class="table-warning">
+                     <tr>
+                        <th scope="col">Nombre del empleado</th>
+                        <th scope="col">Sueldo</th>
+                     </tr>
+                  </thead>
+                  <tr id="fila">
+                     <td><input type="text" class="form-control" placeholder="nombre" id="nombre"></td>
+                     <td>
+                      <input type="number" class="form-control" placeholder="$" id="sueldo">
+                   </td>
+                  </tr>
+               </table>
+            </div>
+         </div>
+         <div class="col">
+               <a onclick="calcular()" class="btn btn-warning" href="javascript:void(0)">Calcular</a>
+         </div>
+         <div class="col">
+            <div class="table-responsive">
+               <table class="table table-striped" id="tablaSueldo">
+                  <thead class="table-dark">
+                     <tr>
+                        <th scope="col">Nombre del empleado</th>
+                        <th scope="col">Sueldo</th>
+                        <th scope="col">Renta</th>
+                        <th scope="col">Descuento de AFP</th>
+                        <th scope="col">Descuento de ISSS</th>
+                        <th scope="col">Sueldo neto</th>
+                     </tr>
+                  </thead>
+                  <tbody id="bodyMostrar">
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <p id="best"></p>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/b52b18aa29.js" crossorigin="anonymous"></script>
+      <script src="../ejercicio01/js/ejercicio01.js"></script>
+
+</body></html>
