@@ -1,60 +1,53 @@
-/*Estados generales del ejercicio 03*/
-.formcont .containerfrm {
-    margin: 0px;
-    padding: 0px;
-    outline: none;
-    font-family: sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-div.formcont {
+#formsection {
+    outline: none;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     overflow: hidden;
-    --webkit-linear-gradient: (bottom, #0250C5, #D43F8D);
-
+    background-image: url("../../img/fondo.jpg");
 }
 
 ::selection {
     color: #fff;
-    background: #D43F8D;
+    background: #3f8ef4;
 }
 
-div.containerfrm{
-    width: 330px;
-    background: #fff;
+.container {
+    width: 400px;
+    background: #ABF;
     text-align: center;
     border-radius: 5px;
     padding: 50px 35px 10px 35px;
 }
 
-.containerfrm header {
-    padding: 10px;
-    font-size: 25px;
+.container header {
+    font-size: 35px;
+    color: #0FC;
     font-weight: 600;
     margin: 0 0 30px 0;
+
 }
 
-.containerfrm .form-outer {
+.container .form-outer {
     width: 100%;
     overflow: hidden;
 }
 
-.containerfrm .form-outer form {
+.container .form-outer form {
     display: flex;
     width: 400%;
 }
 
-.form-outer form .page .titleform {
-    padding: 7px;
+.form-outer form .page .frmtitle {
     text-align: left;
     font-size: 25px;
     font-weight: 500;
 }
 
-.form-outer form .page .fieldform {
-    padding: 7px;
+.form-outer form .page .field {
     width: 330px;
     height: 45px;
     margin: 45px 0;
@@ -62,16 +55,22 @@ div.containerfrm{
     position: relative;
 }
 
-form .page .fieldform .label {
+/*Estilos de los labels*/
+form .page .field .label {
     position: absolute;
     top: -30px;
     font-weight: 500;
-
 }
 
-form .page .fieldform input {
-    height: 90%;
-    width: 90%;
+#dui {
+    position: relative;
+    top: -30px;
+    font-weight: 500;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding-left: 15px;
@@ -79,21 +78,21 @@ form .page .fieldform input {
     font-weight: 500;
 }
 
-form .page .fieldform select {
+form .page .field select {
     width: 100%;
     padding-left: 10px;
     font-size: 17px;
     font-weight: 500;
 }
 
-form .page .fieldform button {
-    width: 90%;
+form .page .field button {
+    width: 100%;
     height: calc(100% + 5px);
     border: none;
-    background: #D33F8D;
+    background: rgb(63,142,212);
     margin-top: -20px;
     border-radius: 5px;
-    color: #fff;
+    color: #FFF;
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
@@ -102,15 +101,15 @@ form .page .fieldform button {
     transition: 0.5s ease;
 }
 
-form .page .fieldform button:hover {
-    background: #000;
+form .page .field button:hover {
+    background: #AA0;
 }
 
 form .page .btns button {
     margin-top: -20px !important;
 }
 
-form .page .btns buttons.prev {
+form .page .btns button.prev {
     margin-right: 3px;
     font-size: 17px;
 }
@@ -119,22 +118,19 @@ form .page .btns button.next {
     margin-left: 3px;
 }
 
-/*Bara de progreso estilos*/
-
-.containerfrm .progress-bar {
+.container .progress-bar {
     display: flex;
     margin: 40px 0;
     user-select: none;
-
 }
 
-.containerfrm .progress-bar .step {
+.container .progress-bar .step {
     text-align: center;
     width: 100%;
     position: relative;
 }
 
-.containerfrm .progress-bar .step p {
+.container .progress-bar .step p {
     font-weight: 500;
     font-size: 18px;
     color: #000;
@@ -154,17 +150,19 @@ form .page .btns button.next {
     line-height: 25px;
 }
 
-.progress-bar .step .bullet:active{
-    border-color: #D43F8D;
-    background: #D43F8D;
+.progress-bar .step .bullet:active {
+    border-color: #0F0;
+    background: #0F0;
 }
-.progress-bar .step .bullet span{
+
+.progress-bar .step .bullet span {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
 }
+
 .progress-bar .step .bullet:before,
-.progress-bar .step .bulet:after{
+.progress-bar .step .bullet:after {
     position: absolute;
     content: '';
     bottom: 11px;
@@ -173,34 +171,43 @@ form .page .btns button.next {
     width: 44px;
     background: #262626;
 }
-.progress-bar .step .bullet:active:after{
-    background:#D43F8D;
-    transform: scaleX(0);
+
+.progress-bar .step .bullet:active:after {
+    background: #0F0;
+    transform: scaleX(1);
     transform-origin: left;
-    animation: animate 0.3s linear forwards;
+    animation: animate 0.3s linear;
 }
-@keyframes animate{
-    100%{
+
+@keyframes animate {
+    100% {
         transform: scaleX(1);
     }
 }
+
+/*Elimina las lineas antes y depues de la barra de avance*/
 .progress-bar .step:last-child .bullet:before,
-.progress-bar .step:last-child .bullet:after{
+.progress-bar .step:last-child .bullet:after {
     display: none;
 }
-.progress-bar .step p.active{
-    color: #D43F8D;
-    transition:  0.2s linear;
+
+.progress-bar .step p.active {
+    color: #0F0;
+    transition: 0.2s linear;
 }
-.progress-bar .step .check{
+
+.progress-bar .step .check {
     position: absolute;
     left: 50%;
     top: 70px;
     font-size: 15px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: none;
 }
-.progress-bar .step .check.active{
-    display:  block;
-    color: #fff;
+
+.progress-bar .step .check.active {
+    display: block;
+    color: #FFF;
 }
+
+/*Estilos micelanios xD*/

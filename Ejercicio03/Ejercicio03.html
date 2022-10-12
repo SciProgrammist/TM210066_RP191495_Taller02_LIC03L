@@ -6,19 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/menu.css" rel="stylesheet">
     <link href="../Ejercicio03/css/estilos.css" rel="stylesheet">
-    <script src="../ejercicio03/js/ejercicio03.js"></script>
     <link rel="icon" href="../img/verde.png">
-    <!--Bootstrap and icons links-->
-    <link href="Boostrap_files/css/bootstrap.min.css" rel="stylesheet">
-    <script src="Boostrap_files/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <title>Ejercicio 3</title>
 </head>
 <!--background="../img/fondo.jpg"-->
 
-<body background="../img/fondo.jpg" onload="javascript:criterio()">
+<body>
     <!-- Codigo del menu -->
     <section class="title">
         <h1>Lenguaje Interpretado en el Cliente</h1>
@@ -60,34 +53,42 @@
             </li>
         </ul>
     </nav>
-    <br>
-    <div class="formcont">
-        <div class="containerfrm">
-            <header>Compra de voleto de vuelos</header>
+
+    <section id="formsection">
+        <div class="container">
+            <header>¡Vuela con Airnet!</header>
             <div class="progress-bar">
                 <div class="step">
-                    <p>Name</p>
+                    <p>
+                        Datos
+                    </p>
                     <div class="bullet">
                         <span>1</span>
                     </div>
                     <div class="check fas fa-check"></div>
                 </div>
                 <div class="step">
-                    <p>Contact</p>
+                    <p>
+                        Contact
+                    </p>
                     <div class="bullet">
                         <span>2</span>
                     </div>
                     <div class="check fas fa-check"></div>
                 </div>
                 <div class="step">
-                    <p>Birth</p>
+                    <p>
+                        Birth
+                    </p>
                     <div class="bullet">
                         <span>3</span>
                     </div>
                     <div class="check fas fa-check"></div>
                 </div>
                 <div class="step">
-                    <p>Submit</p>
+                    <p>
+                        Submit
+                    </p>
                     <div class="bullet">
                         <span>4</span>
                     </div>
@@ -97,34 +98,70 @@
             <div class="form-outer">
                 <form action="#">
                     <div class="page slide-page">
-                        <div class="titleform">
-                            Basic Info:
+                        <div class="frmtitle">
+                            Informacion Personal:
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
                             <div class="label">
-                                First Name
+                                Nombre Completo:
                             </div>
-                            <input type="text" />
+                            <input type="text" placeholder="Juan... Perez...">
                         </div>
-                        <div class="fieldform">
-                            <div class="label">Last name</div>
-                            <input type="text" />
+                        <div class="field">
+                            <div class="label">
+                                Genero:
+                            </div>
+                            <select name="generos" id="genero">
+                                <option value="Hombre">Hombre</option>
+                                <option value="Mujer">Mujer</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                            <div id="dui">
+                                DUI:
+                            </div>
+                            <input type="Number" min="0" placeholder="1-2345678">
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
+                            <div class="label">
+                                Direccion:
+                            </div>
+                            <input type="text" placeholder="Calle... Block#... Casa N#">
+                        </div>
+                        <div class="field">
+                             <div class="label">
+                                Pasaporte:
+                            </div>
+                            <input type="number" min="0" placeholder="1-2345678">
+                            <div id="dui">
+                                Edad:
+                            </div>
+                            <input type="number" min="18" max="99" placeholder="+18">
+                        </div>
+                          <div class="field">
+                            <div class="label">
+                                Correo Electronico:
+                            </div>
+                            <input type="email" placeholder="asddsa@servidor.com">
+                        </div>
+                        <div class="field">
                             <button class="firstNext next">Next</button>
                         </div>
                     </div>
                     <div class="page">
-                        <div class="titleform">
+                        <div class="frmtitle">
                             Contact Info:
                         </div>
-                        <div class="fieldform">
-                            <div class="label">Email address</div>
-                            <input type="text" placeholder="asd@ejemplo.com">
+                        <div class="field">
+                            <div class="label">
+                                Email Address
+                            </div>
+                            <input type="text">
                         </div>
-                        <div class="fieldform">
-                            <div class="label">Phone Number</div>
-                            <input type="Number" />
+                        <div class="field">
+                            <div class="label">
+                                Phone Number
+                            </div>
+                            <input type="Number">
                         </div>
                         <div class="field btns">
                             <button class="prev-1 prev">Previous</button>
@@ -132,45 +169,45 @@
                         </div>
                     </div>
                     <div class="page">
-                        <div class="titleform">
+                        <div class="frmtitle">
                             Date of Birth:
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
                             <div class="label">
                                 Date
                             </div>
-                            <input type="date" />
+                            <input type="text">
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
                             <div class="label">
                                 Gender
                             </div>
                             <select>
                                 <option>Male</option>
                                 <option>Female</option>
-                                <option>Maricon</option>
+                                <option>Other</option>
                             </select>
                         </div>
                         <div class="field btns">
-                            <button class=" prev-2 prev">Previous</button>
+                            <button class="prev-2 prev">Previous</button>
                             <button class="next-2 next">Next</button>
                         </div>
                     </div>
                     <div class="page">
-                        <div class="titleform">
+                        <div class="frmtitle">
                             Login Details:
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
                             <div class="label">
-                                User Name
+                                Username
                             </div>
-                            <input type="text" />
+                            <input type="text">
                         </div>
-                        <div class="fieldform">
+                        <div class="field">
                             <div class="label">
                                 Password
                             </div>
-                            <input type="password" />
+                            <input type="password">
                         </div>
                         <div class="field btns">
                             <button class="prev-3 prev">Previous</button>
@@ -180,5 +217,6 @@
                 </form>
             </div>
         </div>
-    </div>
+    </section>
+    <script src="js/ejercicio03.js"></script>
 </body></html>
