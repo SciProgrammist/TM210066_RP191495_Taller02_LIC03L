@@ -88,6 +88,9 @@ class boleto {
     }
 }
 
+const cliente = new persona();
+const boletoCliente = new boleto();
+
 //Constantes para obtener el valor de los elementos que toman parte en la animacion.
 const slidePage = document.querySelector(".slide-page");
 const nextBtnFirst = document.querySelector(".firstNext");
@@ -103,19 +106,21 @@ const bullet = document.querySelectorAll(".step .bullet");
 
 nextBtnFirst.addEventListener("click", function (event) {
 
-    let nom = document.getElementById('destinos').value;
-    let gene = document.getElementById('fecha_des').value;
-    let dui = document.getElementById('destinos').value;
-    let direccion = document.getElementById('fecha_des').value;
-    let pasaporte = document.getElementById('destinos').value;
-    let edad = document.getElementById('fecha_des').value;
-    let correo = document.getElementById('destinos').value;
+    let nom = document.getElementById('nombre').value;
+    let gene = document.getElementById('genero').value;
+    let dui = document.getElementById('duii').value;
+    let directioon = document.getElementById('direccion').value;
+    let pasaport = document.getElementById('pasaporte').value;
+    let eda = document.getElementById('eda').value;
+    let correo = document.getElementById('correo').value;
 
-    Cliente = new persona();
-    Cliente.nombre = nom;
-    Cliente.genero = gene;
-    Cliente.DUI = dui;
-    Cliente.dire
+    cliente.nombre = nom;
+    cliente.genero = gene;
+    cliente.DUI = dui;
+    cliente.direccion = directioon;
+    cliente.pasaporte = pasaport;
+    cliente.edad = eda;
+    cliente.email = correo;
 
     //Codigo para la animacion.
     event.preventDefault();
@@ -151,13 +156,13 @@ nextBtnThird.addEventListener("click", function (event) {
     let regreso = document.getElementById('fecha_reg').value.toString();
     regreso = convertDigitIn(regreso);
     //Creando objeto
-    let BoletoCliente = new boleto(destino, partida, regreso);
-
-    window.alert("destino" + destino + "Partida" + partida + "regreso" + regreso);
+    boletoCliente.pais_destino = destino;
+    boletoCliente.fecha_partida = partida;
+    boletoCliente.fecha_regreso = regreso;
     //Mostrando datos en el ultimo formulario costo
-    document.getElementById('input-costo').value = "$" + BoletoCliente.costoDevuelo();
+    document.getElementById('input-costo').value = "$" + boletoCliente.costoDevuelo();
     //Mostrando datos en el ultimo formulario dias 
-    document.getElementById('input-dias').value = BoletoCliente.diasVisita();
+    document.getElementById('input-dias').value = boletoCliente.diasVisita();
 });
 submitBtn.addEventListener("click", function () {
     bullet[current - 1].classList.add("active");
@@ -165,7 +170,7 @@ submitBtn.addEventListener("click", function () {
     progressText[current - 1].classList.add("active");
     current += 1;
     setTimeout(function () {
-        alert("Your Form Successfully Signed up");
+        Horabuena();
         location.reload();
     }, 100);
 });
@@ -200,4 +205,18 @@ function convertDigitIn(str) {
     let [year, month, day] = date.split('-');
     let result = [month, day, year].join('/');
     return result;
+}
+
+function Horabuena() {
+    var myWindow = window.open("", "_blank");
+    myWindow.document.write("<p>Gracias por tu interes en volar con nosotros!</p>");
+    myWindow.document.write("<p>Querido cliente: </p>");
+    myWindow.document.write(cliente.nombre);
+    myWindow.document.write("<p>Que ha elegido como destino viajar a:</p>");
+    myWindow.document.write(boletoCliente.pais_destino);
+    myWindow.document.write("<p>Con su fecha de salida agendada el dia:</p>");
+    myWindow.document.write(boletoCliente.fecha_partida);
+    myWindow.document.write("<p>y fecha de regreso para el dia:</p>");
+    myWindow.document.write(boletoCliente.fecha_regreso);
+
 }
