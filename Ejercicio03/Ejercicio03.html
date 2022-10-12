@@ -9,7 +9,7 @@
     <link rel="icon" href="../img/verde.png">
     <title>Ejercicio 3</title>
 </head>
-<!--background="../img/fondo.jpg"-->
+
 
 <body>
     <!-- Codigo del menu -->
@@ -185,7 +185,7 @@
                             <div class="label">
                                 Pais de Destino:
                             </div>
-                            <select>
+                            <select id="destinos">
                                 <optgroup label="Norte America">
                                 <option>Mexico</option>
                                 <option>U.S.A</option></optgroup>
@@ -204,13 +204,13 @@
                             <div class="label">
                                 Fecha de Partida:
                             </div>
-                            <input type="date" name="trip-start" value="2022-10-00" min="2022-10-00" max="2023-03-00">
+                            <input id="fecha_des" type="date" name="trip-start" value="2022-10-01" min="2022-10-01" max="2023-03-01">
                         </div>
                          <div class="field">
                             <div class="label">
                                 Fecha de Regreso:
                             </div>
-                             <input type="date" name="trip-start" value="2022-11-01" min="2022-10-01" max="2023-03-00">
+                             <input id="fecha_reg" type="date" name="trip-start" value="2022-11-01" min="2022-10-01" max="2023-03-01">
                         </div>
                       
                         <div class="field btns">
@@ -226,13 +226,13 @@
                             <div class="label">
                                 Costo del vuelo:
                             </div>
-                            <input  style="background-color: white;" type="number" disabled placeholder="$">
+                            <input  id="input-costo" type="text" disabled placeholder="$">
                         </div>
                         <div class="field">
                             <div class="label">
                                 Dias de visita:
                             </div>
-                            <input style="background-color: white;" type="number" disabled placeholder="00">
+                            <input id="input-dias" type="number" disabled placeholder="00">
                         </div>
                         <div class="field btns">
                             <button class="prev-3 prev">Previous</button>
