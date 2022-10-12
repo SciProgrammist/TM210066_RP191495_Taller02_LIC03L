@@ -1,4 +1,3 @@
-
 /*Estados generales del ejercicio 03*/
 .formcont .containerfrm {
     margin: 0px;
@@ -31,6 +30,7 @@ div.containerfrm{
 }
 
 .containerfrm header {
+    padding: 10px;
     font-size: 25px;
     font-weight: 600;
     margin: 0 0 30px 0;
@@ -47,12 +47,14 @@ div.containerfrm{
 }
 
 .form-outer form .page .titleform {
+    padding: 7px;
     text-align: left;
     font-size: 25px;
     font-weight: 500;
 }
 
 .form-outer form .page .fieldform {
+    padding: 7px;
     width: 330px;
     height: 45px;
     margin: 45px 0;
@@ -64,11 +66,12 @@ form .page .fieldform .label {
     position: absolute;
     top: -30px;
     font-weight: 500;
+
 }
 
 form .page .fieldform input {
-    height: 100%;
-    width: 100%;
+    height: 90%;
+    width: 90%;
     border: 1px solid lightgrey;
     border-radius: 5px;
     padding-left: 15px;
@@ -84,7 +87,7 @@ form .page .fieldform select {
 }
 
 form .page .fieldform button {
-    width: 100%;
+    width: 90%;
     height: calc(100% + 5px);
     border: none;
     background: #D33F8D;
