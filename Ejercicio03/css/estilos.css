@@ -174,14 +174,14 @@ form .page .btns button.next {
 
 .progress-bar .step .bullet:active:after {
     background: #0F0;
-    transform: scaleX(1);
+    transform: scaleX(0);
     transform-origin: left;
-    animation: animate 0.3s linear;
+    animation: animate 0.3s linear forwards;
 }
 
 @keyframes animate {
     100% {
-        transform: scaleX(1);
+        transform: scaleX(+1);
     }
 }
 
